@@ -22,7 +22,10 @@ public abstract class Conta implements InterfaceConta {
 	}
 	
 	@Override
-	public void sacar(double valor) {
+	public void sacar(double valor){
+		if(saldo<valor) {
+			throw new IllegalArgumentException("Saldo Insuficiente!");
+		}
 		this.saldo -= valor;
 		
 	}
@@ -34,6 +37,9 @@ public abstract class Conta implements InterfaceConta {
 
 	@Override
 	public void transferir(double valor, Conta contaDestino) {
+		if(saldo<valor) {
+			throw new IllegalArgumentException("Saldo Insuficiente!");
+		}
 		this.saldo-= valor;
 		contaDestino.depositar(valor);
 	}
