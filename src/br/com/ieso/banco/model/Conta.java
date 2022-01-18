@@ -26,6 +26,9 @@ public abstract class Conta implements InterfaceConta {
 		if(saldo<valor) {
 			throw new IllegalArgumentException("Saldo Insuficiente!");
 		}
+		if(valor<0) {
+			throw new IllegalArgumentException("Valor de saque negativo!");
+		}
 		this.saldo -= valor;
 		
 	}
@@ -39,6 +42,9 @@ public abstract class Conta implements InterfaceConta {
 	public void transferir(double valor, Conta contaDestino) {
 		if(saldo<valor) {
 			throw new IllegalArgumentException("Saldo Insuficiente!");
+		}
+		if(valor<0) {
+			throw new IllegalArgumentException("Valor de transferencia negativo!");
 		}
 		this.saldo-= valor;
 		contaDestino.depositar(valor);
