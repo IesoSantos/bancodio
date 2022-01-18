@@ -8,5 +8,5 @@ package br.com.ieso.banco.model;
  *
  */
 public class ContaCorrente {
-
+	
 }
