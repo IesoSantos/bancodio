@@ -3,6 +3,8 @@
  */
 package br.com.ieso.banco.model;
 
+import java.util.List;
+
 /**
  * @author Anderson dos Reis Santos
  *
@@ -10,6 +12,7 @@ package br.com.ieso.banco.model;
 public class Banco {
 	private int id;
 	private String name;
+	private List<Conta> contas;
 	
 	public int getId() {
 		return id;
@@ -22,5 +25,9 @@ public class Banco {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public List<Conta> getContas(){
+		return this.contas;
 	}
 }
