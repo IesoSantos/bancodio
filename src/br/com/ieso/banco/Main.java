@@ -8,7 +8,8 @@ package br.com.ieso.banco;
  *
  */
 public class Main {
-	//Criacao classe Cliente, Conta e main, interface InterfaceConta
+	//Troca de visibilidade dos atributos da classe Conta, inclusao da heranca da classe Conta pela classe ContaCorrente, 
+	//criacao da classe ContaPoupanca
 
 	/**
 	 * @param args
