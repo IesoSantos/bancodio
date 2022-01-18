@@ -9,6 +9,7 @@ import br.com.ieso.banco.model.Cliente;
 import br.com.ieso.banco.model.Conta;
 import br.com.ieso.banco.model.ContaCorrente;
 import br.com.ieso.banco.model.ContaPoupanca;
+import br.com.ieso.banco.model.TipoMovimentacaoFinanceira;
 
 /**
  * @author Anderson dos Reis Santos
@@ -34,7 +35,7 @@ public class Main {
 		cc.imprimirExtrato();
 		cp.imprimirExtrato();
 		
-		cc.depositar(100);
+		cc.depositar(100, TipoMovimentacaoFinanceira.DEPOSITO);
 		
 		cc.imprimirExtrato();
 		cp.imprimirExtrato();
@@ -43,9 +44,9 @@ public class Main {
 		
 		cc.imprimirExtrato();
 		cp.imprimirExtrato();
-		//try {
-			cp.sacar(300);
-		//}
+		
+		cp.sacar(10);
+	
 		
 		
 		cc.imprimirExtrato();
