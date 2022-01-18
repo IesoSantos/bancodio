@@ -13,6 +13,8 @@ public interface InterfaceConta {
 	
 	public void depositar(double valor);
 	
-	public void transferir(double valor, InterfaceConta contaDestino);
+	public void transferir(double valor, Conta contaDestino);
+	
+	public void imprimirExtrato();
 
 }
