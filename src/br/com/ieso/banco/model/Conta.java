@@ -79,6 +79,14 @@ public abstract class Conta implements InterfaceConta {
 		System.out.println(String.format("Titular: %s", cliente.getNome()));
 		System.out.println(String.format("Agencia: %d", agencia));
 		System.out.println(String.format("Conta Numero: %d", numero));
+		imprimirMovimentacoes();
+		System.out.println(String.format("\nSaldo: R$ %.2f  \n\n", saldo));
+	}
+
+	/**
+	 * 
+	 */
+	private void imprimirMovimentacoes() {
 		System.out.println("\n          Data                        Tipo de Movimentacao             Valor\n");
 		for(MovimentacaoFinanceira mf: extrato) {
 			System.out.print(mf.getDataMovimentacao() + "          "+ mf.getTipoMovimentacao().getDescricao());
@@ -92,6 +100,5 @@ public abstract class Conta implements InterfaceConta {
 					
 		System.out.println(mf.getValor());
 		}
-		System.out.println(String.format("\nSaldo: R$ %.2f  \n\n", saldo));
 	}
 }
